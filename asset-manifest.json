@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.c17080f1.css",
   "main.css.map": "static/css/main.c17080f1.css.map",
-  "main.js": "static/js/main.cdbbed27.js",
-  "main.js.map": "static/js/main.cdbbed27.js.map",
+  "main.js": "static/js/main.cff94d2f.js",
+  "main.js.map": "static/js/main.cff94d2f.js.map",
   "static/media/55years.png": "static/media/55years.dacc0cf8.png",
   "static/media/BusBuddies.jpg": "static/media/BusBuddies.8fed59e1.jpg",
   "static/media/BusLineupWithLogo.png": "static/media/BusLineupWithLogo.2f2cd1c7.png",
@@ -14,5 +14,7 @@
   "static/media/Charter5.jpg": "static/media/Charter5.d248355d.jpg",
   "static/media/Charter6.jpg": "static/media/Charter6.0c08d9e4.jpg",
   "static/media/Charter7.jpg": "static/media/Charter7.0811035f.jpg",
-  "static/media/GarageAndBuses.jpg": "static/media/GarageAndBuses.f2c7677d.jpg"
+  "static/media/Circa1991.png": "static/media/Circa1991.0a7a3855.png",
+  "static/media/GarageAndBuses.jpg": "static/media/GarageAndBuses.f2c7677d.jpg",
+  "static/media/LogoOnBus.png": "static/media/LogoOnBus.0395e570.png"
 }
