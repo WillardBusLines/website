@@ -4,14 +4,14 @@
     "schoolbuses": ["School Buses", "Bus Scolaires"],
     "charters": ["Charters", "Autobus Nolisés"],
     "aboutus": ["About Us", "Propos de Nous"],
-    "contactus": ["Contract Us", "Contactez Nous"]
+    "contactus": ["Contact Us", "Contactez Nous"]
   },
   "home": {
     "cancellations": [
       "Notices of bus cancellations or delays can be found ",
       "Avis d'annulation de bus ou des retards peuvent être trouvés "
     ],
-    "here": ["here", "ici"],
+    "here": ["here.", "ici."],
     "blub": [
       "At Willard Bus Lines, our goal is to provide professional and dependable transportation services across Temiskaming Shores and area.\nWe are a family owned and operated business that is proudly 100% Canadian.\nWith our experienced drivers and quality fleet, take comfort in knowing we will safely get you where you need to go.",
       "A Willard Bus Lines, notre objectif est de fournir des services de transport professionnels et fiables à travers Temiskaming Shores et la région. Nous sommes une entreprise familiale et entreprise exploitée qui est fièrement 100% canadien.\nAvec nos chauffeurs expérimentés et flotte de qualité, se consoler en sachant que nous allons vous rendre en toute sécurité où vous devez aller."
@@ -19,6 +19,21 @@
     "mission": [
       "Our mission is to continue the safe, reliable, and on-time service that we have always provided.",
       "Notre mission est de poursuivre le service sûr, fiable et en temps que nous avons toujours fourni."
+    ]
+  },
+  "school-buses": {
+    "cancellations": [
+      "Notices of bus cancellations or delays can be found ",
+      "Avis d'annulation de bus ou des retards peuvent être trouvés "
+    ],
+    "here": ["here.", "ici."],
+    "blurb1": [
+      "Willard Bus Lines currently serves a large area of North Eastern Ontario, spanning from Temagami to Kirkland Lake. We operate 46 school routes daily, split between three school boards.\n\nIf you have any questions about your child's eligibilty or school zone boundaries, click ",
+      "Willard Bus Lines dessert actuellement une grande partie du Nord-Est de l'Ontario, allant de Temagami à Kirkland Lake. Nous exploitons 46 itinéraires scolaires quotidiens, répartis entre les trois commissions scolaires.\n\nSi vous avez des questions au sujet de la zone ou admissibilité à cet scolaire des limites de votre enfant, cliquez ."
+    ],
+    "blurb2": [
+      "In addition, Willard Bus Lines participates in the annual \"Timiskaming Bus Buddies Program\" held at College Boreal.\n\nThis Young Rider Day is designed to make sure children and new riders are comfortable with riding the school bus, as well as teaching them bus safety involved with waiting for the bus, getting on and off, and travelling on the bus.\n\nWillard Bus Lines is proud to volunteer at the event by donating buses for rides and display.",
+      "En outre, Willard Bus Lines participe au \"Programme Bus Buddies Timiskaming\" annuelle tenue au Collège Boréal.\n\nCette Journée Jeunes Écoliers est conçu pour faire en sorte que les enfants et les nouveaux coureurs sont à l'aise avec l'autobus scolaire, ainsi que de leur enseigner la sécurité des autobus impliqué dans l'attente du bus, monter et descendre, et voyager dans le bus.\n\nWillard Bus Lines est fier de faire du bénévolat à l'événement en donnant des bus pour des tours et affichage."
     ]
   }
 }

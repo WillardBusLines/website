@@ -4,6 +4,14 @@ import { getTranslate } from "react-localize-redux";
 import HeaderComponent from "./header-component";
 import FacebookProvider, { Like } from "react-facebook";
 
+const textBoxStyle = {
+  whiteSpace: "pre-line",
+  backgroundColor: "#e2bd50",
+  borderRadius: "5px",
+  border: "5px solid #c0c0c0",
+  padding: "10px"
+};
+
 class HomeComponent extends Component {
   render() {
     console.log("rendering home");
@@ -24,17 +32,7 @@ class HomeComponent extends Component {
             <div>{this.props.translate("home.mission")}</div>
           </div>
           <div style={{ flex: 1.25, justifyContent: "space-between" }}>
-            <div
-              style={{
-                whiteSpace: "pre-line",
-                backgroundColor: "#e2bd50",
-                borderRadius: "5px",
-                border: "5px solid #c0c0c0",
-                padding: "10px"
-              }}
-            >
-              {this.props.translate("home.blub")}
-            </div>
+            <div style={textBoxStyle}>{this.props.translate("home.blub")}</div>
             <img
               style={{
                 width: "100%",

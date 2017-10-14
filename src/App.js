@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 import HeaderComponent from "./components/header-component";
 import HomeComponent from "./components/home-component";
+import SchoolBusesComponent from "./components/school-buses-component";
 import "./App.css";
 
 class App extends Component {
@@ -11,22 +12,12 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={HomeComponent} />
-          <Route path="/School-Buses" component={SchoolBuses} />
+          <Route path="/School-Buses" component={SchoolBusesComponent} />
           <Route path="/Charters" component={Charters} />
           <Route path="/About-Us" component={AboutUs} />
           <Route path="/Contact-Us" component={ContactUs} />
         </div>
       </Router>
-    );
-  }
-}
-
-class SchoolBuses extends Component {
-  render() {
-    return (
-      <HeaderComponent>
-        <div>SchoolBuses</div>
-      </HeaderComponent>
     );
   }
 }
