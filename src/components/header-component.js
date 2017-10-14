@@ -89,7 +89,7 @@ class HeaderComponent extends Component {
                     cursor: "pointer"
                   }}
                   onClick={() => this.props.setActiveLanguage("en")}
-                  src={require("../gallery/britishFlag.png")}
+                  src={require("../gallery/canadianFlag.png")}
                   alt="British Flag"
                 />
               </div>

@@ -17,7 +17,7 @@ class HomeComponent extends Component {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ flex: 2 }}>{this.props.translate("home.mission")}</div>
-          <div style={{ flex: 1.5, justifyContent: "space-between" }}>
+          <div style={{ flex: 1.25, justifyContent: "space-between" }}>
             <div
               style={{
                 whiteSpace: "pre-line",
