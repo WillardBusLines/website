@@ -4,6 +4,7 @@ import HeaderComponent from "./components/header-component";
 import HomeComponent from "./components/home-component";
 import SchoolBusesComponent from "./components/school-buses-component";
 import ChartersComponent from "./components/charters-component";
+import AboutUsComponent from "./components/about-us-component";
 import "./App.css";
 
 class App extends Component {
@@ -15,20 +16,10 @@ class App extends Component {
           <Route exact path="/" component={HomeComponent} />
           <Route path="/School-Buses" component={SchoolBusesComponent} />
           <Route path="/Charters" component={ChartersComponent} />
-          <Route path="/About-Us" component={AboutUs} />
+          <Route path="/About-Us" component={AboutUsComponent} />
           <Route path="/Contact-Us" component={ContactUs} />
         </div>
       </Router>
-    );
-  }
-}
-
-class AboutUs extends Component {
-  render() {
-    return (
-      <HeaderComponent>
-        <div>AboutUs</div>
-      </HeaderComponent>
     );
   }
 }
