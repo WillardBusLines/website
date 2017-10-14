@@ -90,7 +90,7 @@ class HeaderComponent extends Component {
                   }}
                   onClick={() => this.props.setActiveLanguage("en")}
                   src={require("../gallery/canadianFlag.png")}
-                  alt="British Flag"
+                  alt="Canadian Flag"
                 />
               </div>
               <div
