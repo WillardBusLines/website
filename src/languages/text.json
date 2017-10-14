@@ -1,0 +1,24 @@
+{
+  "header": {
+    "home": ["Home", "Page d'accueil"],
+    "schoolbuses": ["School Buses", "Bus Scolaires"],
+    "charters": ["Charters", "Autobus Nolisés"],
+    "aboutus": ["About Us", "Propos de Nous"],
+    "contactus": ["Contract Us", "Contactez Nous"]
+  },
+  "home": {
+    "cancellations": [
+      "Notices of bus cancellations or delays can be found ",
+      "Avis d'annulation de bus ou des retards peuvent être trouvés "
+    ],
+    "here": ["here", "ici"],
+    "blub": [
+      "At Willard Bus Lines, our goal is to provide professional and dependable transportation services across Temiskaming Shores and area.\nWe are a family owned and operated business that is proudly 100% Canadian.\nWith our experienced drivers and quality fleet, take comfort in knowing we will safely get you where you need to go.",
+      "A Willard Bus Lines, notre objectif est de fournir des services de transport professionnels et fiables à travers Temiskaming Shores et la région. Nous sommes une entreprise familiale et entreprise exploitée qui est fièrement 100% canadien.\nAvec nos chauffeurs expérimentés et flotte de qualité, se consoler en sachant que nous allons vous rendre en toute sécurité où vous devez aller."
+    ],
+    "mission": [
+      "Our mission is to continue the safe, reliable, and on-time service that we have always provided.",
+      "Notre mission est de poursuivre le service sûr, fiable et en temps que nous avons toujours fourni."
+    ]
+  }
+}
