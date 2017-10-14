@@ -42,7 +42,7 @@ class HeaderComponent extends Component {
           <div>
             <img
               style={{ maxWidth: "100%" }}
-              src={require("../gallery/BusLineup.jpg")}
+              src={require("../gallery/BusLineupWithLogo.png")}
               alt="Lineup"
             />
           </div>
