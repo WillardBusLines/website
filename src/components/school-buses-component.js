@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTranslate } from "react-localize-redux";
 import HeaderComponent from "./header-component";
-import FacebookProvider, { Like } from "react-facebook";
 
 const textBoxStyle = {
+  flex: "0 0 40%",
   whiteSpace: "pre-line",
   backgroundColor: "#e2bd50",
   borderRadius: "5px",
@@ -22,10 +22,16 @@ class SchoolBusesComponent extends Component {
             {this.props.translate("school-buses.here")}
           </a>
         </div>
-        <div style={{ display: "flex" }}>
-          <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            padding: "10px"
+          }}
+        >
+          <div style={{ flex: "0 0 40%", padding: "15px" }}>
             <img
-              style={{ width: "90%", padding: "10px" }}
+              style={{ width: "100%" }}
               src={require("../gallery/BusTop.jpg")}
               alt="Bus Top"
             />
@@ -37,13 +43,19 @@ class SchoolBusesComponent extends Component {
             </a>
           </div>
         </div>
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            padding: "10px"
+          }}
+        >
           <div style={textBoxStyle}>
             {this.props.translate("school-buses.blurb2")}
           </div>
-          <div>
+          <div style={{ flex: "0 0 40%", padding: "15px" }}>
             <img
-              style={{ height: "90%", padding: "10px" }}
+              style={{ width: "100%" }}
               src={require("../gallery/BusBuddies.jpg")}
               alt="Bus Top"
             />

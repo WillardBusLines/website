@@ -28,6 +28,7 @@ class HomeComponent extends Component {
             <img
               style={{ width: "95%" }}
               src={require("../gallery/GarageAndBuses.jpg")}
+              alt="garage and buses"
             />
             <div>{this.props.translate("home.mission")}</div>
           </div>

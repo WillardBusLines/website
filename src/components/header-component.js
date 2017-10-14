@@ -77,7 +77,7 @@ class HeaderComponent extends Component {
             >
               <div
                 style={
-                  this.props.currentLang == "en"
+                  this.props.currentLang === "en"
                     ? activeFlagStyle
                     : inactiveFlagStyle
                 }
@@ -95,7 +95,7 @@ class HeaderComponent extends Component {
               </div>
               <div
                 style={
-                  this.props.currentLang == "fr"
+                  this.props.currentLang === "fr"
                     ? activeFlagStyle
                     : inactiveFlagStyle
                 }
