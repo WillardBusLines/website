@@ -26,16 +26,70 @@ class ChartersComponent extends Component {
           </Link>
           {this.props.translate("charters.page")}
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <img src={require("../gallery/Charter1.jpg")} alt="Charter 1" />
-          <img src={require("../gallery/Charter2.jpg")} alt="Charter 2" />
-          <img src={require("../gallery/Charter3.jpg")} alt="Charter 3" />
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center"
+          }}
+        >
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter1.jpg")}
+              alt="Charter 1"
+            />
+          </div>
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter2.jpg")}
+              alt="Charter 2"
+            />
+          </div>
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter3.jpg")}
+              alt="Charter 3"
+            />
+          </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <img src={require("../gallery/Charter4.jpg")} alt="Charter 4" />
-          <img src={require("../gallery/Charter5.jpg")} alt="Charter 5" />
-          <img src={require("../gallery/Charter6.jpg")} alt="Charter 6" />
-          <img src={require("../gallery/Charter7.jpg")} alt="Charter 7" />
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center"
+          }}
+        >
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter4.jpg")}
+              alt="Charter 4"
+            />
+          </div>
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter5.jpg")}
+              alt="Charter 5"
+            />
+          </div>
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter6.jpg")}
+              alt="Charter 6"
+            />
+          </div>
+          <div>
+            <img
+              style={{ maxWidth: "100%" }}
+              src={require("../gallery/Charter7.jpg")}
+              alt="Charter 7"
+            />
+          </div>
         </div>
       </HeaderComponent>
     );

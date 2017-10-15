@@ -20,7 +20,7 @@ class AboutUsComponent extends Component {
       <HeaderComponent>
         <div style={textBoxStyle}>
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", maxWidth: "100%" }}
             src={require("../gallery/Circa1991.png")}
             alt="Circa 1991"
           />
@@ -28,7 +28,7 @@ class AboutUsComponent extends Component {
         </div>
         <div style={textBoxStyle}>
           <img
-            style={{ float: "left", margin: "0 10px 0 0" }}
+            style={{ float: "left", margin: "0 10px 0 0", maxWidth: "100%" }}
             src={require("../gallery/LogoOnBus.png")}
             alt="Circa 1991"
           />

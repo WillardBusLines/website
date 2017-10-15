@@ -27,6 +27,7 @@ class ContactUsComponent extends Component {
         <div
           style={{
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "space-between"
           }}
         >
@@ -58,8 +59,8 @@ class ContactUsComponent extends Component {
           </div>
         </div>
         <img
-          style={{ margin: "20px 0 0" }}
-          src={require("../gallery/BusInFall.jpeg")}
+          style={{ margin: "20px 0 0", maxWidth: "100%" }}
+          src={require("../gallery/YardByDrone.jpg")}
           alt="Bus In Fall"
         />
       </HeaderComponent>
