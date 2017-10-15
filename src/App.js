@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
-import HeaderComponent from "./components/header-component";
 import HomeComponent from "./components/home-component";
 import SchoolBusesComponent from "./components/school-buses-component";
 import ChartersComponent from "./components/charters-component";

@@ -42,12 +42,14 @@ class HomeComponent extends Component {
               src={require("../gallery/55years.png")}
               alt="55 years"
             />
-            <FacebookProvider appId="132699010786769">
-              <Like
-                href="http://www.facebook.com/WillardBusLines"
-                width="100"
-              />
-            </FacebookProvider>
+            <div style={{ width: "225px" }}>
+              <FacebookProvider appId="132699010786769">
+                <Like
+                  href="http://www.facebook.com/WillardBusLines"
+                  width="100"
+                />
+              </FacebookProvider>
+            </div>
           </div>
         </div>
       </HeaderComponent>
