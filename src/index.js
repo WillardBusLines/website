@@ -15,7 +15,8 @@ const store = createStore(
 );
 
 const languages = ["en", "fr"];
-store.dispatch(initialize(languages));
+const defaultLanguage = localStorage.getItem("language") || languages[0];
+store.dispatch(initialize(languages, { defaultLanguage: defaultLanguage }));
 store.dispatch(addTranslation(require("./languages/text.json")));
 
 ReactDOM.render(

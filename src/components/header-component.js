@@ -18,7 +18,8 @@ const headerTextStyle = {
   fontSize: "20px",
   textDecoration: "none",
   color: "black",
-  width: "100%"
+  width: "100%",
+  minWidth: "123px"
 };
 
 const activeFlagStyle = {
@@ -88,7 +89,10 @@ class HeaderComponent extends Component {
                     width: "25px",
                     cursor: "pointer"
                   }}
-                  onClick={() => this.props.setActiveLanguage("en")}
+                  onClick={() => {
+                    this.props.setActiveLanguage("en");
+                    localStorage.setItem("language", "en");
+                  }}
                   src={require("../gallery/canadianFlag.png")}
                   alt="Canadian Flag"
                 />
@@ -105,7 +109,10 @@ class HeaderComponent extends Component {
                     height: "15px",
                     width: "25px"
                   }}
-                  onClick={() => this.props.setActiveLanguage("fr")}
+                  onClick={() => {
+                    this.props.setActiveLanguage("fr");
+                    localStorage.setItem("language", "fr");
+                  }}
                   src={require("../gallery/frenchFlag.png")}
                   alt="French Flag"
                 />
