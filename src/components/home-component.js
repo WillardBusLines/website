@@ -33,7 +33,7 @@ class HomeComponent extends Component {
             <div>{this.props.translate("home.mission")}</div>
           </div>
           <div style={{ flex: 1.25, justifyContent: "space-between" }}>
-            <div style={textBoxStyle}>{this.props.translate("home.blub")}</div>
+            <div style={textBoxStyle}>{this.props.translate("home.blurb")}</div>
             <img
               style={{
                 width: "100%",
