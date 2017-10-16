@@ -14,7 +14,6 @@ const textBoxStyle = {
 
 class HomeComponent extends Component {
   render() {
-    console.log("rendering home");
     return (
       <HeaderComponent>
         <div style={{ padding: "20px", color: "red" }}>
