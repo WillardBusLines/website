@@ -16,11 +16,16 @@ const pageStyle = {
   textAlign: "center"
 };
 
+const flagImageStyle = {
+  height: "15px",
+  width: "25px",
+  cursor: "pointer"
+};
+
 const headerTextStyle = {
   fontSize: "17px",
   textDecoration: "none",
   color: "black",
-  width: "100%",
   minWidth: "123px",
   whiteSpace: "nowrap"
 };
@@ -58,34 +63,54 @@ class HeaderComponent extends Component {
     this.setState({ isMenuOpen: false });
   }
 
-  headerLinks = () => {
+  renderSingleLink(to, text) {
     return (
-      <div>
-        <div>
-          <Link style={headerTextStyle} to="/">
-            {this.props.translate("header.home")}
-          </Link>
-        </div>
-        <div>
-          <Link style={headerTextStyle} to="/School-Buses">
-            {this.props.translate("header.schoolbuses")}
-          </Link>
-        </div>
-        <div>
-          <Link style={headerTextStyle} to="/Charters">
-            {this.props.translate("header.charters")}
-          </Link>
-        </div>
-        <div>
-          <Link style={headerTextStyle} to="/About-Us">
-            {this.props.translate("header.aboutus")}
-          </Link>
-        </div>
-        <div>
-          <Link style={headerTextStyle} to="/Contact-Us">
-            {this.props.translate("header.contactus")}
-          </Link>
-        </div>
+      <div style={{ width: "100%" }}>
+        <Link style={headerTextStyle} to={to}>
+          {this.props.translate(text)}
+        </Link>
+      </div>
+    );
+  }
+
+  renderLinks() {
+    return [
+      this.renderSingleLink("/", "header.home"),
+      this.renderSingleLink("/School-Buses", "header.schoolbuses"),
+      this.renderSingleLink("/Charters", "header.charters"),
+      this.renderSingleLink("/About-Us", "header.aboutus"),
+      this.renderSingleLink("/Contact-Us", "header.contactus")
+    ];
+  }
+
+  renderFlag(lang) {
+    const flagStyle =
+      this.props.currentLang === lang ? activeFlagStyle : inactiveFlagStyle;
+    return (
+      <div style={flagStyle}>
+        <img
+          style={flagImageStyle}
+          onClick={() => {
+            this.props.setActiveLanguage(lang);
+            localStorage.setItem("language", lang);
+          }}
+          src={require(`../gallery/${lang}Flag.png`)}
+          alt={`${lang} Flag`}
+        />
+      </div>
+    );
+  }
+
+  renderHeaderBar() {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "5px"
+        }}
+      >
+        {this.renderLinks()}
         <div
           style={{
             display: "flex",
@@ -93,53 +118,14 @@ class HeaderComponent extends Component {
             width: "100%"
           }}
         >
-          <div
-            style={
-              this.props.currentLang === "en"
-                ? activeFlagStyle
-                : inactiveFlagStyle
-            }
-          >
-            <img
-              style={{
-                height: "15px",
-                width: "25px",
-                cursor: "pointer"
-              }}
-              onClick={() => {
-                this.props.setActiveLanguage("en");
-                localStorage.setItem("language", "en");
-              }}
-              src={require("../gallery/canadianFlag.png")}
-              alt="Canadian Flag"
-            />
-          </div>
-          <div
-            style={
-              this.props.currentLang === "fr"
-                ? activeFlagStyle
-                : inactiveFlagStyle
-            }
-          >
-            <img
-              style={{
-                height: "15px",
-                width: "25px"
-              }}
-              onClick={() => {
-                this.props.setActiveLanguage("fr");
-                localStorage.setItem("language", "fr");
-              }}
-              src={require("../gallery/frenchFlag.png")}
-              alt="French Flag"
-            />
-          </div>
-        </div>{" "}
+          {this.renderFlag("en")}
+          {this.renderFlag("fr")}
+        </div>
       </div>
     );
-  };
+  }
 
-  headerDrawer = () => {
+  renderHeaderDrawer() {
     const menuOptions = {
       isOpen: this.state.isMenuOpen,
       close: this.close.bind(this),
@@ -155,33 +141,9 @@ class HeaderComponent extends Component {
       align: "center",
       closeOnInsideClick: false
     };
-    return <DropdownMenu {...menuOptions}>{this.headerLinks()}</DropdownMenu>;
-  };
-
-  headerBar = () => {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          padding: "5px"
-        }}
-      >
-        <Link style={headerTextStyle} to="/">
-          {this.props.translate("header.home")}
-        </Link>
-        <Link style={headerTextStyle} to="/School-Buses">
-          {this.props.translate("header.schoolbuses")}
-        </Link>
-        <Link style={headerTextStyle} to="/Charters">
-          {this.props.translate("header.charters")}
-        </Link>
-        <Link style={headerTextStyle} to="/About-Us">
-          {this.props.translate("header.aboutus")}
-        </Link>
-        <Link style={headerTextStyle} to="/Contact-Us">
-          {this.props.translate("header.contactus")}
-        </Link>
+      <DropdownMenu {...menuOptions}>
+        {this.renderLinks()}
         <div
           style={{
             display: "flex",
@@ -189,80 +151,38 @@ class HeaderComponent extends Component {
             width: "100%"
           }}
         >
-          <div
-            style={
-              this.props.currentLang === "en"
-                ? activeFlagStyle
-                : inactiveFlagStyle
-            }
-          >
-            <img
-              style={{
-                height: "15px",
-                width: "25px",
-                cursor: "pointer"
-              }}
-              onClick={() => {
-                this.props.setActiveLanguage("en");
-                localStorage.setItem("language", "en");
-              }}
-              src={require("../gallery/canadianFlag.png")}
-              alt="Canadian Flag"
-            />
-          </div>
-          <div
-            style={
-              this.props.currentLang === "fr"
-                ? activeFlagStyle
-                : inactiveFlagStyle
-            }
-          >
-            <img
-              style={{
-                height: "15px",
-                width: "25px"
-              }}
-              onClick={() => {
-                this.props.setActiveLanguage("fr");
-                localStorage.setItem("language", "fr");
-              }}
-              src={require("../gallery/frenchFlag.png")}
-              alt="French Flag"
-            />
-          </div>
+          {this.renderFlag("en")}
+          {this.renderFlag("fr")}
         </div>
-      </div>
+      </DropdownMenu>
     );
-  };
+  }
 
   render() {
     return (
       <div style={pageStyle}>
         <div style={{ backgroundColor: "#e2bd50" }}>
-          <div>
-            <img
-              style={{ maxWidth: "100%", display: "block" }}
-              src={require("../gallery/BusLineupWithLogo.png")}
-              alt="Lineup"
-            />
-            <MediaQuery query="(min-width: 1050px)">
-              {doesMatch => {
-                if (doesMatch) {
-                  return this.headerBar();
-                } else {
-                  return this.headerDrawer();
-                }
-              }}
-            </MediaQuery>
-          </div>
+          <img
+            style={{ maxWidth: "100%", display: "block" }}
+            src={require("../gallery/BusLineupWithLogo.png")}
+            alt="Lineup"
+          />
+          <MediaQuery query="(min-width: 1050px)">
+            {doesMatch => {
+              if (doesMatch) {
+                return this.renderHeaderBar();
+              } else {
+                return this.renderHeaderDrawer();
+              }
+            }}
+          </MediaQuery>
         </div>
 
         {this.props.children}
 
         <div style={{ textAlign: "left", fontSize: "12px" }}>
           © 2014 willardbuslines.ca
-        </div>
-        <div style={{ textAlign: "left", fontSize: "12px" }}>
+          <br />
           Logos by Phippen Signs
         </div>
       </div>
