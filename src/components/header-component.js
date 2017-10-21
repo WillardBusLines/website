@@ -6,6 +6,7 @@ import {
   getActiveLanguage,
   setActiveLanguage
 } from "react-localize-redux";
+import MediaQuery from "react-responsive";
 
 const pageStyle = {
   width: "90%",
@@ -37,88 +38,101 @@ const inactiveFlagStyle = {
 };
 
 class HeaderComponent extends Component {
+  headerDrawer = <div> HI </div>;
+  headerBar = (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        padding: "5px"
+      }}
+    >
+      <Link style={headerTextStyle} to="/">
+        {this.props.translate("header.home")}
+      </Link>
+      <Link style={headerTextStyle} to="/School-Buses">
+        {this.props.translate("header.schoolbuses")}
+      </Link>
+      <Link style={headerTextStyle} to="/Charters">
+        {this.props.translate("header.charters")}
+      </Link>
+      <Link style={headerTextStyle} to="/About-Us">
+        {this.props.translate("header.aboutus")}
+      </Link>
+      <Link style={headerTextStyle} to="/Contact-Us">
+        {this.props.translate("header.contactus")}
+      </Link>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          width: "100%"
+        }}
+      >
+        <div
+          style={
+            this.props.currentLang === "en"
+              ? activeFlagStyle
+              : inactiveFlagStyle
+          }
+        >
+          <img
+            style={{
+              height: "15px",
+              width: "25px",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              this.props.setActiveLanguage("en");
+              localStorage.setItem("language", "en");
+            }}
+            src={require("../gallery/canadianFlag.png")}
+            alt="Canadian Flag"
+          />
+        </div>
+        <div
+          style={
+            this.props.currentLang === "fr"
+              ? activeFlagStyle
+              : inactiveFlagStyle
+          }
+        >
+          <img
+            style={{
+              height: "15px",
+              width: "25px"
+            }}
+            onClick={() => {
+              this.props.setActiveLanguage("fr");
+              localStorage.setItem("language", "fr");
+            }}
+            src={require("../gallery/frenchFlag.png")}
+            alt="French Flag"
+          />
+        </div>
+      </div>
+    </div>
+  );
+
   render() {
     return (
       <div style={pageStyle}>
         <div style={{ backgroundColor: "#e2bd50" }}>
           <div>
             <img
-              style={{ maxWidth: "100%" }}
+              style={{ maxWidth: "100%", display: "block" }}
               src={require("../gallery/BusLineupWithLogo.png")}
               alt="Lineup"
             />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              padding: "5px"
-            }}
-          >
-            <Link style={headerTextStyle} to="/">
-              {this.props.translate("header.home")}
-            </Link>
-            <Link style={headerTextStyle} to="/School-Buses">
-              {this.props.translate("header.schoolbuses")}
-            </Link>
-            <Link style={headerTextStyle} to="/Charters">
-              {this.props.translate("header.charters")}
-            </Link>
-            <Link style={headerTextStyle} to="/About-Us">
-              {this.props.translate("header.aboutus")}
-            </Link>
-            <Link style={headerTextStyle} to="/Contact-Us">
-              {this.props.translate("header.contactus")}
-            </Link>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "flex-end",
-                width: "100%"
+            <MediaQuery query="(min-width: 1050px)">
+              {doesMatch => {
+                if (doesMatch) {
+                  return this.headerBar;
+                } else {
+                  return "HELP";
+                }
               }}
-            >
-              <div
-                style={
-                  this.props.currentLang === "en"
-                    ? activeFlagStyle
-                    : inactiveFlagStyle
-                }
-              >
-                <img
-                  style={{
-                    height: "15px",
-                    width: "25px",
-                    cursor: "pointer"
-                  }}
-                  onClick={() => {
-                    this.props.setActiveLanguage("en");
-                    localStorage.setItem("language", "en");
-                  }}
-                  src={require("../gallery/canadianFlag.png")}
-                  alt="Canadian Flag"
-                />
-              </div>
-              <div
-                style={
-                  this.props.currentLang === "fr"
-                    ? activeFlagStyle
-                    : inactiveFlagStyle
-                }
-              >
-                <img
-                  style={{
-                    height: "15px",
-                    width: "25px"
-                  }}
-                  onClick={() => {
-                    this.props.setActiveLanguage("fr");
-                    localStorage.setItem("language", "fr");
-                  }}
-                  src={require("../gallery/frenchFlag.png")}
-                  alt="French Flag"
-                />
-              </div>
-            </div>
+            </MediaQuery>
           </div>
         </div>
 
