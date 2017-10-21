@@ -14,6 +14,17 @@ const textBoxStyle = {
   margin: "20px 0 0"
 };
 
+const buttonStyle = {
+  padding: "7px",
+  display: "table",
+  margin: "0px",
+  color: "black",
+  backgroundColor: "white",
+  border: "2px solid #c0c0c0",
+  textDecoration: "none",
+  borderRadius: "5px"
+};
+
 class ContactUsComponent extends Component {
   render() {
     return (
@@ -43,9 +54,12 @@ class ContactUsComponent extends Component {
               <div>{this.props.translate("contact-us.apply")}</div>
               <div>
                 <center style={{ position: "relative" }}>
-                  <button>
+                  <a
+                    href={require("../gallery/ApplicationForm2013.pdf")}
+                    style={buttonStyle}
+                  >
                     {this.props.translate("contact-us.apply-button")}
-                  </button>
+                  </a>
                 </center>
               </div>
             </div>

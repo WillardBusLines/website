@@ -19,7 +19,8 @@ const headerTextStyle = {
   textDecoration: "none",
   color: "black",
   width: "100%",
-  minWidth: "123px"
+  minWidth: "123px",
+  whiteSpace: "nowrap"
 };
 
 const activeFlagStyle = {
