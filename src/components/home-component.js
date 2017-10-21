@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTranslate } from "react-localize-redux";
 import HeaderComponent from "./header-component";
-import FacebookProvider, { Like } from "react-facebook";
+import FacebookProvider, { Page } from "react-facebook";
 
 const textBoxStyle = {
   whiteSpace: "pre-line",
@@ -43,9 +43,9 @@ class HomeComponent extends Component {
             />
             <div style={{ width: "225px" }}>
               <FacebookProvider appId="132699010786769">
-                <Like
+                <Page
                   href="http://www.facebook.com/WillardBusLines"
-                  width="100"
+                  tabs={null}
                 />
               </FacebookProvider>
             </div>
