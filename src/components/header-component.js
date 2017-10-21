@@ -15,7 +15,7 @@ const pageStyle = {
 };
 
 const headerTextStyle = {
-  fontSize: "20px",
+  fontSize: "17px",
   textDecoration: "none",
   color: "black",
   width: "100%",
