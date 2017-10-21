@@ -7,6 +7,7 @@ import {
   setActiveLanguage
 } from "react-localize-redux";
 import MediaQuery from "react-responsive";
+import DropdownMenu from "react-dd-menu";
 
 const pageStyle = {
   width: "90%",
@@ -37,8 +38,124 @@ const inactiveFlagStyle = {
   padding: "3px"
 };
 
+const buttonStyle = {
+  width: "20px"
+};
+
 class HeaderComponent extends Component {
-  headerDrawer = <div> HI </div>;
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMenuOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({ isMenuOpen: !this.state.isMenuOpen });
+  }
+
+  close() {
+    this.setState({ isMenuOpen: false });
+  }
+
+  menuLinks = (
+    <div>
+      <div>
+        <Link style={headerTextStyle} to="/">
+          {this.props.translate("header.home")}
+        </Link>
+      </div>
+      <div>
+        <Link style={headerTextStyle} to="/School-Buses">
+          {this.props.translate("header.schoolbuses")}
+        </Link>
+      </div>
+      <div>
+        <Link style={headerTextStyle} to="/Charters">
+          {this.props.translate("header.charters")}
+        </Link>
+      </div>
+      <div>
+        <Link style={headerTextStyle} to="/About-Us">
+          {this.props.translate("header.aboutus")}
+        </Link>
+      </div>
+      <div>
+        <Link style={headerTextStyle} to="/Contact-Us">
+          {this.props.translate("header.contactus")}
+        </Link>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          width: "100%"
+        }}
+      >
+        <div
+          style={
+            this.props.currentLang === "en"
+              ? activeFlagStyle
+              : inactiveFlagStyle
+          }
+        >
+          <img
+            style={{
+              height: "15px",
+              width: "25px",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              this.props.setActiveLanguage("en");
+              localStorage.setItem("language", "en");
+            }}
+            src={require("../gallery/canadianFlag.png")}
+            alt="Canadian Flag"
+          />
+        </div>
+        <div
+          style={
+            this.props.currentLang === "fr"
+              ? activeFlagStyle
+              : inactiveFlagStyle
+          }
+        >
+          <img
+            style={{
+              height: "15px",
+              width: "25px"
+            }}
+            onClick={() => {
+              this.props.setActiveLanguage("fr");
+              localStorage.setItem("language", "fr");
+            }}
+            src={require("../gallery/frenchFlag.png")}
+            alt="French Flag"
+          />
+        </div>
+      </div>{" "}
+    </div>
+  );
+
+  headerDrawer = () => {
+    const menuOptions = {
+      isOpen: this.state.isMenuOpen,
+      close: this.close.bind(this),
+      toggle: (
+        <input
+          type="image"
+          src={require("../gallery/HamburgerIcon.png")}
+          style={buttonStyle}
+          alt="hamburger icon"
+          onClick={this.toggle.bind(this)}
+        />
+      ),
+      align: "center",
+      closeOnInsideClick: false
+    };
+    return <DropdownMenu {...menuOptions}>{this.menuLinks}</DropdownMenu>;
+  };
+
   headerBar = (
     <div
       style={{
@@ -129,7 +246,7 @@ class HeaderComponent extends Component {
                 if (doesMatch) {
                   return this.headerBar;
                 } else {
-                  return "HELP";
+                  return this.headerDrawer();
                 }
               }}
             </MediaQuery>
