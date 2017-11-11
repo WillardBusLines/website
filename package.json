@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://willardbuslines.github.io/website",
+  "homepage": "https://willardbuslines.ca",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^16.0.0",
