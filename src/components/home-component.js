@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getTranslate } from "react-localize-redux";
+import { getTranslate, getActiveLanguage } from "react-localize-redux";
 import HeaderComponent from "./header-component";
 import FacebookProvider, { Page } from "react-facebook";
 
@@ -14,6 +14,12 @@ const textBoxStyle = {
 
 class HomeComponent extends Component {
   render() {
+    let stopImage;
+    if (this.props.language.code === 'en') {
+      stopImage = require("../gallery/en/IStopYouStop.png")
+    } else {
+      stopImage = require("../gallery/fr/IStopYouStop.png")
+    }
     return (
       <HeaderComponent>
         <div style={{ padding: "20px", color: "red" }}>
@@ -28,6 +34,11 @@ class HomeComponent extends Component {
               style={{ width: "95%" }}
               src={require("../gallery/GarageAndBuses.jpg")}
               alt="garage and buses"
+            />
+            <img
+              style={{ width: "95%" }}
+              src={stopImage}
+              alt="I Stop You Stop"
             />
             <div>{this.props.translate("home.mission")}</div>
           </div>
@@ -57,7 +68,8 @@ class HomeComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  translate: getTranslate(state.locale)
+  translate: getTranslate(state.locale),
+  language: getActiveLanguage(state.locale)
 });
 
 export default connect(mapStateToProps)(HomeComponent);
