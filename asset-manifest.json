@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.3efd2260.css",
   "main.css.map": "static/css/main.3efd2260.css.map",
-  "main.js": "static/js/main.687865b6.js",
-  "main.js.map": "static/js/main.687865b6.js.map",
+  "main.js": "static/js/main.693c1f89.js",
+  "main.js.map": "static/js/main.693c1f89.js.map",
   "static/media/55years.png": "static/media/55years.dacc0cf8.png",
   "static/media/ApplicationForm2013.pdf": "static/media/ApplicationForm2013.ed35f2aa.pdf",
   "static/media/BusBuddies.jpg": "static/media/BusBuddies.8fed59e1.jpg",
@@ -20,5 +20,7 @@
   "static/media/HamburgerIcon.png": "static/media/HamburgerIcon.79b18a5d.png",
   "static/media/IStopYouStop.png": "static/media/IStopYouStop.25c623ef.png",
   "static/media/LogoOnBus.png": "static/media/LogoOnBus.0395e570.png",
-  "static/media/YardByDrone.jpg": "static/media/YardByDrone.2bd59160.jpg"
+  "static/media/YardByDrone.jpg": "static/media/YardByDrone.2bd59160.jpg",
+  "static/media/bus-buddies-poster-KL.png": "static/media/bus-buddies-poster-KL.4c6bebdf.png",
+  "static/media/bus-buddies-poster-NL.png": "static/media/bus-buddies-poster-NL.12688eb0.png"
 }
