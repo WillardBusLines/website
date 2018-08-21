@@ -61,28 +61,6 @@ class SchoolBusesComponent extends Component {
             />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            padding: "10px"
-          }}
-        >
-          <div style={{ flex: "0 0 40%", padding: "15px" }}>
-            <img
-              style={{ width: "100%" }}
-              src={require("../gallery/bus-buddies-poster-NL.png")}
-              alt="Bus Top"
-            />
-          </div>
-          <div style={{ flex: "0 0 40%", padding: "15px" }}>
-            <img
-              style={{ width: "100%" }}
-              src={require("../gallery/bus-buddies-poster-KL.png")}
-              alt="Bus Top"
-            />
-          </div>
-        </div>
       </HeaderComponent>
     );
   }
