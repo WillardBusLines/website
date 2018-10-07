@@ -38,15 +38,15 @@ class HomeComponent extends Component {
           <div style={{ flex: "0 0 40%", padding: "15px" }}>
             <img
               style={{ width: "100%" }}
-              src={require("../gallery/bus-buddies-poster-NL.png")}
-              alt="Bus Top"
+              src={require("../gallery/i-stop-you-stop.png")}
+              alt="I Stop You Stop"
             />
           </div>
           <div style={{ flex: "0 0 40%", padding: "15px" }}>
             <img
               style={{ width: "100%" }}
-              src={require("../gallery/bus-buddies-poster-KL.png")}
-              alt="Bus Top"
+              src={require("../gallery/bus-driver-appreciation.png")}
+              alt="Bus Driver Appreciation"
             />
           </div>
         </div>
@@ -73,6 +73,14 @@ class HomeComponent extends Component {
               }}
               src={require("../gallery/55years.png")}
               alt="55 years"
+            />
+            <img
+              style={{
+                width: "100%",
+                padding: "10px 0px 0px 0px"
+              }}
+              src={require("../gallery/Dakota-and-Brantley.jpg")}
+              alt="dakota and brantley"
             />
             <div style={{ width: "225px" }}>
               <FacebookProvider appId="132699010786769">
